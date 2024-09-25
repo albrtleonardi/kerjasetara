@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <style>
+        /* Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -43,12 +44,23 @@
         button[type="submit"]:hover {
             background-color: #218838;
         }
+        .alert {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h2>Forgot Password</h2>
     @if (session('status'))
-        <div>{{ session('status') }}</div>
+        <div class="alert">{{ session('status') }}</div>
     @endif
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
@@ -56,7 +68,7 @@
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" required autofocus>
             @error('email')
-                <span>{{ $message }}</span>
+                <span class="error">{{ $message }}</span>
             @enderror
         </div>
         <button type="submit">Send Password Reset Link</button>
