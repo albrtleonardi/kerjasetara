@@ -21,9 +21,11 @@ class RegisterController extends Controller
             'password' => 'required|min:6|confirmed',
         ]);
 
+        $password = bcrypt($request->password);
+
         $user = User::create([
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => $password,
             'role' => 'User',
         ]);
 
