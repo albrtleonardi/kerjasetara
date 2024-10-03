@@ -8,22 +8,30 @@
 </head>
 <body>
     @auth
-    <form action="/UpdatePassword" method="PUT">
+    <form action="/UpdatePassword" method="POST">
         @csrf
         <div>
             <label>Old Password:</label>
-            <input type="password" name="OldPassword" required>
-            @error('password')
+            <input type="password" name="old_password" required>
+            @error('old_password')
                 <span>{{ $message }}</span>
             @enderror
         </div>
         <div>
             <label>New Password:</label>
-            <input type="password" name="NewPassword" required>
-            @error('password')
+            <input type="password" name="new_password" required>
+            @error('new_password')
                 <span>{{ $message }}</span>
             @enderror
         </div>
+        <div>
+            <label>Confirm New Password:</label>
+            <input type="password" name="new_password_confirmation" required>
+            @error('new_password_confirmation')
+                <span>{{ $message }}</span>
+            @enderror
+        </div>
+        <button type="submit">Update Password</button>
     </form>
     @endauth
 </body>
