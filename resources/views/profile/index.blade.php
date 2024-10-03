@@ -10,6 +10,7 @@
     <div>
         @auth
             <p>Email : {{ auth()->user()->email }}</p>
+            <p>Role : {{ auth()->user()->role }}</p>
         @endauth
     </div>
     <div>
