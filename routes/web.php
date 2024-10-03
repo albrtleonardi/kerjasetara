@@ -4,7 +4,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [RegisterController::class, 'register']);
@@ -28,3 +30,10 @@ Route::get('jobs/{id}', [JobController::class, 'show'])->name('jobs.show');
 Route::get('dashboard', function () {
     return redirect()->route('jobs.index');
 })->middleware('auth')->name('dashboard');
+
+
+Route::get('profile', [ProfileController::class, 'index'])->middleware('auth');
+
+Route::get('ChangePassword', [ChangePasswordController::class, 'index'])->middleware('auth');
+
+Route::post('UpdatePassword', [ChangePasswordController::class, 'update'])->middleware('auth');
