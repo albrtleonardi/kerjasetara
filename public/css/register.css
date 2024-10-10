@@ -11,7 +11,7 @@ body {
     height: 100vh;
 }
 
-.loginForm {
+.registerForm {
     flex: 0 0 50%;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ body {
     text-align: center;
 }
 
-.loginBox {
+.registerBox {
     border: none;
     padding: 3rem;
     border-radius: 16px;
@@ -34,14 +34,6 @@ h2 {
     font-family: 'roboto';
     font-size: 2rem;
     margin-bottom: 10px;
-}
-
-h3 {
-    font-weight: normal;
-    font-family: 'roboto';
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 2rem;
 }
 
 form {
@@ -62,7 +54,7 @@ input[type="email"], input[type="password"] {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded input fields */
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 1rem;
 }
@@ -73,30 +65,14 @@ button[type="submit"] {
     color: #fff;
     padding: 12px;
     border: none;
-    border-radius: 8px; /* Rounded button */
+    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 20px;
 }
 
 button[type="submit"]:hover {
-    background-color: #00163b; /* Slightly darker blue on hover */
-}
-
-.forgot-password-link {
-    font-family: 'roboto';
-    font-size: 2vh;
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.forgot-password-link a {
-    color: #001f4d;
-    text-decoration: none;
-}
-
-.forgot-password-link a:hover {
-    text-decoration: underline;
+    background-color: #00163b;
 }
 
 p {
