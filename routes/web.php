@@ -8,6 +8,10 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ProfileController;
 
+Route::get('/', function () {
+    return view('index');
+});
+
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [RegisterController::class, 'register']);
 
