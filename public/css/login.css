@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'roboto';
+    background-color: #f4f4f4;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.loginForm {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loginBox {
+    border: none;
+    padding: 3rem;
+    border-radius: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 588px;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'roboto';
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: normal;
+    font-family: 'roboto';
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="email"], input[type="password"] {
+    font-family: 'roboto';
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    font-family: 'roboto';
+    background-color: #001f4d; /* Dark blue button */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #00163b; /* Slightly darker blue on hover */
+}
+
+.forgot-password-link {
+    font-family: 'roboto';
+    font-size: 2vh;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password-link a {
+    color: #001f4d;
+    text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'roboto';
+    text-align: center;
+    margin-top: 10px;
+}
+
+p a {
+    color: #001f4d;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.imageContainer {
+    flex: 0 0 50%;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
